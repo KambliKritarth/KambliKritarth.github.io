@@ -1,0 +1,93 @@
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Ibarra Real Nova' rel='stylesheet'>
+  <style>
+    body{
+      background-color: rgb(20,20,20);
+    }
+    #menu{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .menu-item{
+      color: white;
+      font-size: clamp(3rem, 8vw, 8rem);
+      font-family: "Ibarra Real Nova", serif;
+
+      display: block;
+      text-decoration: none;
+      padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    }
+    #menu-items{
+      margin-left: clamp(4rem, 20vw, 48rem);
+      position: relative;
+      z-index: 2;
+    }
+    #menu-items:hover > .menu-item{
+      opacity: 0.3;
+    }
+    #menu-items:hover > .menu-item:hover{
+      opacity: 1;
+    }
+    #menu-background-pattern{
+      height: 100vh;
+      width: 100vw;
+      background-image:radial-gradient(
+        rgba(255,255,255,0.1) 9%,
+        transparent 9%
+      );
+      background-position: 0% 0%;
+      background-size: 12vmin 12vmin;
+
+      position: absolute;
+      left:0px;
+      top:0px;
+      z-index: 1;
+
+      transition: 800ms, background-size 800ms;
+    }
+    #menu-items:hover ~ #menu-background-pattern{
+      background-size: 11vmin 11vmin;
+      opacity: 0.5;
+    }
+    #menu[data-active-index = "0"] > #menu-background-pattern{
+      background-position: 0% -25%;
+    }
+    #menu[data-active-index = "1"] > #menu-background-pattern{
+      background-position: 0% -25%;
+    }
+    #menu[data-active-index = "2"] > #menu-background-pattern{
+      background-position: 0% -50%;
+    }
+    #menu[data-active-index = "3"] > #menu-background-pattern{
+      background-position: 0% -75%;
+    }
+    #menu-background-image{
+      height: 80%;
+      width: 80%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 0;
+      background-position: center 40%;
+      background-size: 110vmax;
+      opacity: 0.15;
+      transition: opacity 800ms ease,
+      background-size 800ms ease,
+      background-position 800ms ease ;
+    }
+  </style>
+  <script src = "index.js"></script>
+</head>
+<body>
+  <div id="menu">
+  <div id="menu-items">
+    <a href = "/" class="menu-item">Home</a>
+    <a href = "/" class="menu-item">Projects</a>
+    <a href = "/" class="menu-item">Skills</a>
+    <a href = "/" class="menu-item">Contact Me!</a>
+  </div>
+  <div id="menu-background-pattern"></div>
+  <div id="menu-background-image"><img src="ijustwannarock.jpg" alt="Programmer"></div>
+</div>
+</body>
