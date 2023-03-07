@@ -1,17 +1,26 @@
 <head>
   <link href='https://fonts.googleapis.com/css?family=Ibarra Real Nova' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body{
-      background-color: rgb(20,20,20);
+      background-color: rgb(106, 7, 212);
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
     }
     #menu{
-      height: 100vh;
+      height: 60vh;
       display: flex;
       align-items: center;
+      flex-grow: 0;
     }
     .menu-item{
-      color: white;
-      font-size: clamp(3rem, 8vw, 8rem);
+      color: rgb(255, 255, 254);
+      font-size: clamp(1.5rem, 4vw, 4rem);
       font-family: "Ibarra Real Nova", serif;
 
       display: block;
@@ -33,7 +42,7 @@
       height: 100vh;
       width: 100vw;
       background-image:radial-gradient(
-        rgba(255,255,255,0.1) 9%,
+        rgba(249, 249, 249, 0.155) 9%,
         transparent 9%
       );
       background-position: 0% 0%;
@@ -76,18 +85,161 @@
       background-size 800ms ease,
       background-position 800ms ease ;
     }
+    .editorial {
+      display: block;
+      width: 100%;
+      height: 60px;
+      max-height: 60px;
+      margin: 0;
+      z-index:5;
+      bottom:0;
+      left:0px;
+      float:left;
+      flex-grow: 1;
+    }
+    .parallax1 > use {
+    animation: move-forever1 10s linear infinite;
+      &:nth-child(1) {
+        animation-delay: -2s;
+      }
+    }
+    .parallax2 > use {
+      animation: move-forever2 8s linear infinite;
+      &:nth-child(1) {
+        animation-delay: -2s;
+      }
+    }
+    .parallax3 > use {
+      animation: move-forever3 6s linear infinite;
+      &:nth-child(1) {
+        animation-delay: -2s;
+      }
+    }
+    .parallax4 > use {
+      animation: move-forever4 4s linear infinite;
+      &:nth-child(1) {
+        animation-delay: -2s;
+      }
+    }
+    @keyframes move-forever1 {
+      0% {
+        transform: translate(85px, 0%);
+      }
+      100% {
+        transform: translate(-90px, 0%);
+      }
+    }
+    @keyframes move-forever2 {
+      0% {
+          transform: translate(-90px, 0%);
+      }
+      100% {
+        transform: translate(85px, 0%);
+      }
+    }
+    @keyframes move-forever3 {
+      0% {
+        transform: translate(85px, 0%);
+      }
+      100% {
+        transform: translate(-90px, 0%);
+      }
+    }
+    @keyframes move-forever4 {
+      0% {
+        transform: translate(-90px, 0%);
+      }   
+      100% {
+        transform: translate(85px, 0%);
+      }
+    }
+    .homelings{
+      background-color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .about{
+      color: rgb(106, 7, 212);
+      font-size: clamp(1.5rem, 4vw, 4rem);
+      font-family: "Ibarra Real Nova", serif;
+
+      display: block;
+      text-decoration: none;
+      padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+      flex-grow: 2;
+    }
+    #paragraph{
+      color: rgb(7, 0, 15);
+      font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+      font-family: "Ibarra Real Nova", serif;
+
+      display: block;
+      text-decoration: none;
+      padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    }
   </style>
   <script src = "index.js"></script>
 </head>
 <body>
-  <div id="menu">
-  <div id="menu-items">
-    <a href = "/" class="menu-item">Home</a>
-    <a href = "/" class="menu-item">Projects</a>
-    <a href = "/" class="menu-item">Skills</a>
-    <a href = "/" class="menu-item">Contact Me!</a>
-  </div>
-  <div id="menu-background-pattern"></div>
-  <div id="menu-background-image"><img src="ijustwannarock.jpg" alt="Programmer"></div>
+  <div class="container">
+    <div id="menu">
+      <div id="menu-items">
+        <a href = "/" class="menu-item"><i class="fa fa-home"></i> Home</a>
+        <a href = "/" class="menu-item"><i class="fab fa-github"></i> Projects</a>
+        <a href = "/" class="menu-item"><i class="fa fa-pencil-ruler"></i> Skills</a>
+        <a href = "/" class="menu-item"><i class="fa fa-phone"></i> Contact Me!</a>
+      </div>
+    </div>
+    <div id="divider">
+      <svg class="editorial"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 24 150 28 "
+     preserveAspectRatio="none">
+ <defs>
+ <path id="gentle-wave"
+ d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+  </defs>
+  <g class="parallax1">
+   <use xlink:href="#gentle-wave" x="50" y="3" fill="#f461c1"/>
+  </g>
+    <g class="parallax2">
+   <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"/>
+    </g>
+      <g class="parallax3">
+   <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1"/>
+   </g>
+    <g class="parallax4">
+   <use xlink:href="#gentle-wave" x="50" y="6" fill="#fff"/>  
+  </g>
+</svg>
+    </div>
+    <div class = "homelings" id="me">
+        <a class="about">About me</a>
+        <div id="paragraph">
+          Some years ago, I (Kritarth Kambli) had an epiphany to learn programming and hence took "Computer Applications" as the subject to go without realizing what I am getting myself into.
+        </div>
+    </div>
+    <div class = "homelings" id="aboutme">
+        <a class="about">Interests</a>
+        <div id="paragraph">
+            <ol>Web Development
+                <ol>HTML5</ol>
+                <ol>CSS3</ol>
+                <ol>JavaScript</ol>
+                <ol>React.js</ol>
+                <ol>Next.js (curious)</ol>
+            </ol>
+        </div>
+    </div>
+    <div id="menu-background-pattern"></div>
+    <div id="menu-background-image"></div>
 </div>
+  
 </body>
