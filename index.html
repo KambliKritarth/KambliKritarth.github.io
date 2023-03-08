@@ -1,5 +1,6 @@
 <head>
   <link href='https://fonts.googleapis.com/css?family=Ibarra Real Nova' rel='stylesheet'>
+  <title>Kritarth Kambli</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -173,10 +174,18 @@
       color: rgb(7, 0, 15);
       font-size: clamp(0.5rem, 1.5vw, 1.5rem);
       font-family: "Ibarra Real Nova", serif;
-
-      display: block;
+      display: flex;
+      flex-direction: row;
       text-decoration: none;
-      padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    }
+    .tech-stack{
+      color: rgb(46, 74, 15);
+      font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+      font-family: "Ibarra Real Nova", serif;
+      margin-right: 25px;
+    }
+    .tech-item{
+      font-size: clamp(0.75rem, 2vw, 2rem);
     }
   </style>
   <script src = "index.js"></script>
@@ -229,13 +238,20 @@
     <div class = "homelings" id="aboutme">
         <a class="about">Interests</a>
         <div id="paragraph">
-            <ol>Web Development
-                <ol>HTML5</ol>
-                <ol>CSS3</ol>
-                <ol>JavaScript</ol>
-                <ol>React.js</ol>
-                <ol>Next.js (curious)</ol>
-            </ol>
+            <div class="tech-stack">
+              <p>Web Development</p>
+              <a href = "/" class="tech-item"><i class="fab fa-html5"></i></a>
+              <a href = "/" class="tech-item"><i class="fab fa-css3"></i></a>
+              <a href = "/" class="tech-item"><i class="fab fa-js"></i></a>
+              <a href = "/" class="tech-item"><i class="fab fa-react"></i></a>
+              <a href = "/" class="tech-item"><i class="fab fa-next"></i></a>
+            </div>
+            <div class="tech-stack">
+              <p>Machine Learning</p>
+              <a><img src = "https://www.vectorlogo.zone/logos/numpy/numpy-icon.svg"></a>
+              <a href="">
+                  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/                  svg"><title>pandas</title><path d="M16.922 0h2.623v18.104h-2.623zm-4.126 12.                  94h2.623v2.57h-2.623zm0-7.037h2.623v5.446h-2.623zm0 11.197h2.623v5.446h-2.                  623zM4.456 5.896h2.622V24H4.455zm4.213 2.559h2.623v2.57H8.67zm0 4.151h2.623v5.                  447H8.67zm0-11.187h2.623v5.446H8.67Z"/></svg></a>
+            </div>
         </div>
     </div>
     <div id="menu-background-pattern"></div>
