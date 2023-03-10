@@ -208,30 +208,68 @@
       content: '';
       position: absolute;
       width: 0.5vw;
-      height: 50vw;
+      height: 144vh;
       background-color: black;
       top:0;
       left:47vw;
       margin-left: -1vw;
       z-index: -1;
     }
+
+    @keyframes moveline{
+      0%{
+        height:0;
+      }
+      100%{
+        height:144vh;
+      }
+    }
     .box{
       padding: 0.5vw  2.5vw;
       position: relative;
       width:43vw;
-      background: rgb(106, 7, 212);
+      height: 36vh;
       border-radius: 1vh 1vh 1vh 1vh;
+      animation: movedown 1s linear forwards;
+      opacity: 0;
+    }
+    @keyframes movedown {
+      0%{
+        opacity: 1;
+        transform: translateY(-6vh);
+      }
+      100%{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .container:nth-child(1){
+      animation-delay: 0s;
+    }
+    .container:nth-child(1){
+      animation-delay: 3s;
+    }
+    .container:nth-child(1){
+      animation-delay: 6s;
+    }
+    .container:nth-child(1){
+      animation-delay: 9s;
     }
     .text-box{
       padding: 1vw 1.3vw;
       position: relative;
       border-radius: 1vw;
+      height: 32vh;
       font-family: "Ibarra Real Nova", serif;
-      background-color: white;
+      font-size: 2.25vh;
+      color:#030303;
+      background:#a79fa4;
     }
     .text-box h2{
       font-family: "Ibarra Real Nova", serif;
-      background-color: white;
+      font-size: 4vh;
+      color:#070707;
+      background:#a79fa4;
     }
     .verticalLine{
       content: '';
@@ -239,9 +277,32 @@
       margin-top: 2vw;
       width: 0.5vw;
       left:46.75vw;
-      height: 49.5vw;
-      background-color: #3461c1;
+      height: 144vh;
+      background-color: #2e0021;
       top:0;
+      animation: moveline 3s linear forwards;
+    }
+    .left-container-arrow{
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 3.5vh;
+      z-index:1;
+      right: 1.7vw;
+      border-top:15px solid transparent;
+      border-bottom:15px solid transparent;
+      border-left:15px solid #010101;
+    }
+    .right-container-arrow{
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 3.5vh;
+      z-index:1;
+      left: 1.8vw;
+      border-top:15px solid transparent;
+      border-bottom:15px solid transparent;
+      border-right:15px solid #010101;
     }
     @media(max-width:600px){
       .homelets{
@@ -303,14 +364,6 @@
     </div>
     
     <div class = "homelings" id="me">
-        <div class="homelets">
-          <div class= "abouthomelet" id = "paragraph" >
-            <p>Hey everyone, I am Kritarth Kambli. I am an aspiring software developer looking to collaborate with people who are alike me in terms of passion. </p>
-          </div>
-          <div class= "abouthomelet" id = "image" >
-            <img class="image" src= "./my_photo.jpg" alt="Kritarth Kambli's photo">
-          </div>
-        </div>
         <div class="timeline">
         <div class="box left-container">
           <div class="text-box">
@@ -318,6 +371,7 @@
             <small>2021</small>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,  iusto fugit? Porro magni similique voluptatibus perferendis, magnam  ipsum dolore facere cupiditate quos debitis et fugiat omnis a  officiis corrupti saepe.</p>
           </div>
+          <span class="left-container-arrow"></span>
          </div>
          <div class="box right-container">
           <div class="text-box">
@@ -325,6 +379,7 @@
             <small>2021</small>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,  iusto fugit? Porro magni similique voluptatibus perferendis, magnam  ipsum dolore facere cupiditate quos debitis et fugiat omnis a  officiis corrupti saepe.</p>
           </div>
+          <span class="right-container-arrow"></span>
          </div>
          <div class="box left-container">
           <div class="text-box">
@@ -332,6 +387,7 @@
             <small>2022</small>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,  iusto fugit? Porro magni similique voluptatibus perferendis, magnam  ipsum dolore facere cupiditate quos debitis et fugiat omnis a  officiis corrupti saepe.</p>
           </div>
+          <span class="left-container-arrow"></span>
          </div>
          <div class="box right-container">
           <div class="text-box">
@@ -339,6 +395,7 @@
             <small>2023</small>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,  iusto fugit? Porro magni similique voluptatibus perferendis, magnam  ipsum dolore facere cupiditate quos debitis et fugiat omnis a  officiis corrupti saepe.</p>
           </div>
+          <span class="right-container-arrow"></span>
          </div>
          <div class="verticalLine"></div>
         </div>
