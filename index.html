@@ -39,8 +39,9 @@
     #menu-items:hover > .menu-item:hover{
       opacity: 1;
     }
+    
     #menu-background-pattern{
-      height: 100vh;
+      height: 70vh;
       width: 100vw;
       background-image:radial-gradient(
         rgba(249, 249, 249, 0.155) 9%,
@@ -100,15 +101,11 @@
     }
     .parallax1 > use {
     animation: move-forever1 10s linear infinite;
-      &:nth-child(1) {
-        animation-delay: -2s;
-      }
+      &:nth-child(1) {animation-delay: -2s;}
     }
     .parallax2 > use {
       animation: move-forever2 8s linear infinite;
-      &:nth-child(1) {
-        animation-delay: -2s;
-      }
+      &:nth-child(1) {animation-delay: -2s;}
     }
     .parallax3 > use {
       animation: move-forever3 6s linear infinite;
@@ -154,38 +151,113 @@
         transform: translate(85px, 0%);
       }
     }
+    .abouthead h1{
+      background-color: white;
+      font-size: 5rem;
+      font-family: "Ibarra Real Nova", serif;
+      color:  rgb(106, 7, 212);
+      margin: 1vh 1vh 1vh 10vh;
+    }
     .homelings{
       background-color: white;
       display: flex;
-      align-items: center;
       flex-direction: column;
     }
-    .about{
-      color: rgb(106, 7, 212);
-      font-size: clamp(1.5rem, 4vw, 4rem);
-      font-family: "Ibarra Real Nova", serif;
-
-      display: block;
-      text-decoration: none;
-      padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
-      flex-grow: 2;
-    }
-    #paragraph{
-      color: rgb(7, 0, 15);
-      font-size: clamp(0.5rem, 1.5vw, 1.5rem);
-      font-family: "Ibarra Real Nova", serif;
+    .homelets{
+      padding: 0px;
       display: flex;
-      flex-direction: row;
-      text-decoration: none;
+      flex-direction:row;
     }
-    .tech-stack{
-      color: rgb(46, 74, 15);
-      font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    #image img{
+      height:30vh;
+      margin: 1vh 1vh 1vh 5vh;
+      align-items: center;
+    }
+    #paragraph h1{
+      font-size: 5rem;
       font-family: "Ibarra Real Nova", serif;
-      margin-right: 25px;
+      color:  rgb(106, 7, 212);
+      margin: 1vh 1vh 1vh 10vh;
     }
-    .tech-item{
-      font-size: clamp(0.75rem, 2vw, 2rem);
+    #paragraph p{
+      font-size: 2rem;
+      font-family: "Ibarra Real Nova", serif;
+      color:  white;
+      padding: 1vh 1vh 1vh 1vh;
+      max-width: 45vh;
+      background-color: rgb(106, 7, 212);
+      border-radius: 1vh 1vh 1vh 1vh;
+      margin: 1vh 1vh 1vh 10vh;
+    }
+    .image{
+      border-radius: 1vh 1vh 1vh 1vh;
+    }
+    .timeline{
+      position: relative;
+      max-width: 63vw;
+      margin: 5vw 5vw 5vw 5vw;
+      padding: 2vw 2vw 2vw 2vw;
+    }
+    .left-container{
+      left:-1;
+    }
+    .right-container{
+      left:47vw;
+    }
+    .timeline::after{
+      content: '';
+      position: absolute;
+      width: 0.5vw;
+      height: 50vw;
+      background-color: black;
+      top:0;
+      left:47vw;
+      margin-left: -1vw;
+      z-index: -1;
+    }
+    .box{
+      padding: 0.5vw  2.5vw;
+      position: relative;
+      width:43vw;
+      background: rgb(106, 7, 212);
+      border-radius: 1vh 1vh 1vh 1vh;
+    }
+    .text-box{
+      padding: 1vw 1.3vw;
+      position: relative;
+      border-radius: 1vw;
+      font-family: "Ibarra Real Nova", serif;
+      background-color: white;
+    }
+    .text-box h2{
+      font-family: "Ibarra Real Nova", serif;
+      background-color: white;
+    }
+    .verticalLine{
+      content: '';
+      position: absolute;
+      margin-top: 2vw;
+      width: 0.5vw;
+      left:46.75vw;
+      height: 49.5vw;
+      background-color: #3461c1;
+      top:0;
+    }
+    @media(max-width:600px){
+      .homelets{
+      margin:0px 0px 0px 100px;
+      padding: 10px;
+      display: flex;
+      flex-direction:column;
+    }
+     @media(max-width:600px){
+      .homelets{
+      margin:0px 0px 0px 20px;
+      padding: 10px;
+      display: flex;
+      flex-direction:column;
+    }
+    }
     }
   </style>
   <script src = "index.js"></script>
@@ -194,7 +266,7 @@
   <div class="container">
     <div id="menu">
       <div id="menu-items">
-        <a href = "/" class="menu-item"><i class="fa fa-home"></i> Home</a>
+        <a href = "#me" class="menu-item"><i class="fa fa-home"></i> Home</a>
         <a href = "/" class="menu-item"><i class="fab fa-github"></i> Projects</a>
         <a href = "/" class="menu-item"><i class="fa fa-pencil-ruler"></i> Skills</a>
         <a href = "/" class="menu-item"><i class="fa fa-phone"></i> Contact Me!</a>
@@ -229,33 +301,49 @@
   </g>
 </svg>
     </div>
+    
     <div class = "homelings" id="me">
-        <a class="about">About me</a>
-        <div id="paragraph">
-          Some years ago, I (Kritarth Kambli) had an epiphany to learn programming and hence took "Computer Applications" as the subject to go without realizing what I am getting myself into.
+        <div class="homelets">
+          <div class= "abouthomelet" id = "paragraph" >
+            <p>Hey everyone, I am Kritarth Kambli. I am an aspiring software developer looking to collaborate with people who are alike me in terms of passion. </p>
+          </div>
+          <div class= "abouthomelet" id = "image" >
+            <img class="image" src= "./my_photo.jpg" alt="Kritarth Kambli's photo">
+          </div>
         </div>
-    </div>
-    <div class = "homelings" id="aboutme">
-        <a class="about">Interests</a>
-        <div id="paragraph">
-            <div class="tech-stack">
-              <p>Web Development</p>
-              <a href = "/" class="tech-item"><i class="fab fa-html5"></i></a>
-              <a href = "/" class="tech-item"><i class="fab fa-css3"></i></a>
-              <a href = "/" class="tech-item"><i class="fab fa-js"></i></a>
-              <a href = "/" class="tech-item"><i class="fab fa-react"></i></a>
-              <a href = "/" class="tech-item"><i class="fab fa-next"></i></a>
-            </div>
-            <div class="tech-stack">
-              <p>Machine Learning</p>
-              <a><img src = "https://www.vectorlogo.zone/logos/numpy/numpy-icon.svg"></a>
-              <a href="">
-                  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/                  svg"><title>pandas</title><path d="M16.922 0h2.623v18.104h-2.623zm-4.126 12.                  94h2.623v2.57h-2.623zm0-7.037h2.623v5.446h-2.623zm0 11.197h2.623v5.446h-2.                  623zM4.456 5.896h2.622V24H4.455zm4.213 2.559h2.623v2.57H8.67zm0 4.151h2.623v5.                  447H8.67zm0-11.187h2.623v5.446H8.67Z"/></svg></a>
-            </div>
+        <div class="timeline">
+        <div class="box left-container">
+          <div class="text-box">
+            <h2>Project1</h2>
+            <small>2021</small>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,  iusto fugit? Porro magni similique voluptatibus perferendis, magnam  ipsum dolore facere cupiditate quos debitis et fugiat omnis a  officiis corrupti saepe.</p>
+          </div>
+         </div>
+         <div class="box right-container">
+          <div class="text-box">
+            <h2>Project2</h2>
+            <small>2021</small>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,  iusto fugit? Porro magni similique voluptatibus perferendis, magnam  ipsum dolore facere cupiditate quos debitis et fugiat omnis a  officiis corrupti saepe.</p>
+          </div>
+         </div>
+         <div class="box left-container">
+          <div class="text-box">
+            <h2>Project3</h2>
+            <small>2022</small>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,  iusto fugit? Porro magni similique voluptatibus perferendis, magnam  ipsum dolore facere cupiditate quos debitis et fugiat omnis a  officiis corrupti saepe.</p>
+          </div>
+         </div>
+         <div class="box right-container">
+          <div class="text-box">
+            <h2>Project4</h2>
+            <small>2023</small>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,  iusto fugit? Porro magni similique voluptatibus perferendis, magnam  ipsum dolore facere cupiditate quos debitis et fugiat omnis a  officiis corrupti saepe.</p>
+          </div>
+         </div>
+         <div class="verticalLine"></div>
         </div>
     </div>
     <div id="menu-background-pattern"></div>
     <div id="menu-background-image"></div>
 </div>
-  
 </body>
