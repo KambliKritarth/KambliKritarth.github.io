@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body{
-      background-color: rgb(106, 7, 212);
+      background-color: #5c51bf;
     }
     .container{
       display: flex;
@@ -16,11 +16,12 @@
     #menu{
       height: 60vh;
       display: flex;
+      flex-direction: row;
       align-items: center;
       flex-grow: 0;
     }
     .menu-item{
-      color: rgb(255, 255, 254);
+      color:white;
       font-size: clamp(1.5rem, 4vw, 4rem);
       font-family: "Ibarra Real Nova", serif;
 
@@ -163,10 +164,51 @@
       display: flex;
       flex-direction: column;
     }
-    .homelets{
-      padding: 0px;
+    .about{
+      flex-grow: 0;
+      max-width: 90%;
+      margin: 0 auto;
       display: flex;
-      flex-direction:row;
+    }
+    .cards{
+      flex-wrap: wrap;
+      gap:2em;
+      padding:2em 0;
+      display: flex;
+      flex-direction: row;
+    }
+    .card{
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      max-width: 15vw;
+      text-align: center;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #5c51bf;
+      background-size: cover;
+      border-radius: 2.5vh;
+      -webkit-border-radius: 2.5vh;
+      -moz-border-radius: 2.5vh;
+      -ms-border-radius: 2.5vh;
+      -o-border-radius: 2.5vh;
+      transition: max-width 0.5s ease-in-out;
+      -webkit-transition: max-width 0.5s ease-in-out;
+      -moz-transition: max-width 0.5s ease-in-out;
+      -ms-transition: max-width 0.5s ease-in-out;
+      -o-transition: max-width 0.5s ease-in-out;
+    }
+    .card:hover{
+      max-width: 500px;
+    }
+    .card:nth-of-type(2){
+      background-color: #2e0021;
+    }
+    .card:nth-of-type(3){
+      background-color: #4579E2;
+    }
+    .card:nth-of-type(4){
+      background-color: #3461C1;
     }
     #image img{
       height:30vh;
@@ -197,6 +239,7 @@
       max-width: 63vw;
       margin: 5vw 5vw 5vw 5vw;
       padding: 2vw 2vw 2vw 2vw;
+      flex-grow: 1;
     }
     .left-container{
       left:-1;
@@ -271,24 +314,22 @@
       color:#070707;
       background:#a79fa4;
     }
-    .verticalLine{
-      content: '';
-      position: absolute;
-      margin-top: 2vw;
-      width: 0.5vw;
-      left:46.75vw;
-      height: 144vh;
-      background-color: #2e0021;
-      top:0;
-      animation: moveline 3s linear forwards;
+    .about #pfp{
+      margin: 5vh 40vw 5vh 40vw;
+      align-items: center;
     }
+    .about #pfp img{
+      max-height: 25vh;
+      max-width: 25vw;
+    }
+    @media screen and (min-width:1000px){
     .left-container-arrow{
       height: 0;
       width: 0;
       position: absolute;
       top: 3.5vh;
       z-index:1;
-      right: 1.7vw;
+      right: 1.8vw;
       border-top:15px solid transparent;
       border-bottom:15px solid transparent;
       border-left:15px solid #010101;
@@ -303,22 +344,34 @@
       border-top:15px solid transparent;
       border-bottom:15px solid transparent;
       border-right:15px solid #010101;
-    }
-    @media(max-width:600px){
-      .homelets{
-      margin:0px 0px 0px 100px;
-      padding: 10px;
-      display: flex;
-      flex-direction:column;
-    }
-     @media(max-width:600px){
-      .homelets{
-      margin:0px 0px 0px 20px;
-      padding: 10px;
-      display: flex;
-      flex-direction:column;
+    }  
+    .verticalLine{
+      content: '';
+      position: absolute;
+      margin-top: 2vw;
+      width: 0.5vw;
+      left:46.75vw;
+      height: 144vh;
+      background-color: #2e0021;
+      top:0;
+      animation: moveline 3s linear forwards;
     }
     }
+    @media screen and (max-width:1000px){
+      .text-box{
+      padding: 1vw 1.3vw;
+      position: relative;
+      border-radius: 1vw;
+      height: 32vh;
+      width: 80vw;
+      font-family: "Ibarra Real Nova", serif;
+      font-size: 2.25vh;
+      color:#030303;
+      background:#a79fa4;
+      }
+      .right-container{
+        left:0vw;
+      }
     }
   </style>
   <script src = "index.js"></script>
@@ -349,13 +402,13 @@
     v44h-352z" />
   </defs>
   <g class="parallax1">
-   <use xlink:href="#gentle-wave" x="50" y="3" fill="#f461c1"/>
+   <use xlink:href="#gentle-wave" x="50" y="3" fill="#F461C1"/>
   </g>
     <g class="parallax2">
-   <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"/>
+   <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579E2"/>
     </g>
       <g class="parallax3">
-   <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461c1"/>
+   <use xlink:href="#gentle-wave" x="50" y="9" fill="#3461C1"/>
    </g>
     <g class="parallax4">
    <use xlink:href="#gentle-wave" x="50" y="6" fill="#fff"/>  
@@ -364,6 +417,37 @@
     </div>
     
     <div class = "homelings" id="me">
+      <div class="about">
+        <div class="cards row">
+          <div class="card row">
+            <div class="card-body">
+              <div class="title"><h2>About Me</h2></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   Veniam, accusantium, explicabo, sit in eius vel provident debitis   magni impedit distinctio enim expedita sapiente! Dignissimos quas   voluptatem aspernatur tempore porro aut.</p>
+            </div>
+          </div>
+          <div class="card row">
+            <div class="card-body">
+              <div class="title"><h2>Programming</h2></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   Veniam, accusantium, explicabo, sit in eius vel provident debitis   magni impedit distinctio enim expedita sapiente! Dignissimos quas   voluptatem aspernatur tempore porro aut.</p>
+            </div>
+          </div>
+          <div class="card row">
+            <div class="card-body">
+              <div class="title"><h2>Web Development</h2></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   Veniam, accusantium, explicabo, sit in eius vel provident debitis   magni impedit distinctio enim expedita sapiente! Dignissimos quas   voluptatem aspernatur tempore porro aut.</p>
+            </div>
+          </div>
+          <div class="card row">
+            <div class="card-body">
+              <div class="title"><h2>Hobbies</h2></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   Veniam, accusantium, explicabo, sit in eius vel provident debitis   magni impedit distinctio enim expedita sapiente! Dignissimos quas   voluptatem aspernatur tempore porro aut.</p>
+            </div>
+          </div>
+        </div>
+        <div id="pfp">
+          <img src="./my_photo.jpg" alt="Kritarth Kambli">
+        </div>
+      </div>
         <div class="timeline">
         <div class="box left-container">
           <div class="text-box">
@@ -401,6 +485,7 @@
         </div>
     </div>
     <div id="menu-background-pattern"></div>
+    
     <div id="menu-background-image"></div>
 </div>
 </body>
