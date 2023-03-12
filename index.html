@@ -166,9 +166,24 @@
     }
     .about{
       flex-grow: 0;
-      max-width: 90%;
       margin: 0 auto;
       display: flex;
+      flex-direction: row;
+    }
+    .about h2{
+      margin: 5vh 0 5vh 5vw;
+      font-family: "Ibarra Real Nova", serif;
+      color:  rgb(106, 7, 212);
+    }
+    .about p{
+      margin: 5vh 0 5vh 5vw;
+      font-family: "Ibarra Real Nova", serif;
+      color:  white;
+      background-color:  rgb(106, 7, 212);
+      border-radius: 5vh;
+      font-size: 3vh;
+      padding: 2vh 5vw 2vh 5vw;
+      width: 25vw;
     }
     .cards{
       flex-wrap: wrap;
@@ -185,6 +200,7 @@
       text-align: center;
       overflow: hidden;
       cursor: pointer;
+      color: #fff;
       background-color: #5c51bf;
       background-size: cover;
       border-radius: 2.5vh;
@@ -214,22 +230,6 @@
       height:30vh;
       margin: 1vh 1vh 1vh 5vh;
       align-items: center;
-    }
-    #paragraph h1{
-      font-size: 5rem;
-      font-family: "Ibarra Real Nova", serif;
-      color:  rgb(106, 7, 212);
-      margin: 1vh 1vh 1vh 10vh;
-    }
-    #paragraph p{
-      font-size: 2rem;
-      font-family: "Ibarra Real Nova", serif;
-      color:  white;
-      padding: 1vh 1vh 1vh 1vh;
-      max-width: 45vh;
-      background-color: rgb(106, 7, 212);
-      border-radius: 1vh 1vh 1vh 1vh;
-      margin: 1vh 1vh 1vh 10vh;
     }
     .image{
       border-radius: 1vh 1vh 1vh 1vh;
@@ -315,7 +315,7 @@
       background:#a79fa4;
     }
     .about #pfp{
-      margin: 5vh 40vw 5vh 40vw;
+      margin: 5vh 5vw 5vh 5vw;
       align-items: center;
     }
     .about #pfp img{
@@ -358,7 +358,36 @@
     }
     }
     @media screen and (max-width:1000px){
-      .text-box{
+    .about{
+      flex-grow: 0;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .about h2{
+      margin:1vh 0 1vh 5vw;
+      font-family: "Ibarra Real Nova", serif;
+      color:  rgb(106, 7, 212);
+    }
+    .about p{
+      margin: 1vh 0 1vh 5vw;
+      font-family: "Ibarra Real Nova", serif;
+      color:  white;
+      background-color:  rgb(106, 7, 212);
+      border-radius: 5vh;
+      font-size: 3vh;
+      padding: 2vh 5vw 2vh 5vw;
+      width: 75vw;
+    }
+    .about #pfp{
+      margin: 1vh 1vw 1vh 5vw;
+      align-items: center;
+    }
+    .about #pfp img{
+      max-height: 45vh;
+      max-width: 45vw;
+    }
+    .text-box{
       padding: 1vw 1.3vw;
       position: relative;
       border-radius: 1vw;
@@ -418,32 +447,8 @@
     
     <div class = "homelings" id="me">
       <div class="about">
-        <div class="cards row">
-          <div class="card row">
-            <div class="card-body">
-              <div class="title"><h2>About Me</h2></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   Veniam, accusantium, explicabo, sit in eius vel provident debitis   magni impedit distinctio enim expedita sapiente! Dignissimos quas   voluptatem aspernatur tempore porro aut.</p>
-            </div>
-          </div>
-          <div class="card row">
-            <div class="card-body">
-              <div class="title"><h2>Programming</h2></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   Veniam, accusantium, explicabo, sit in eius vel provident debitis   magni impedit distinctio enim expedita sapiente! Dignissimos quas   voluptatem aspernatur tempore porro aut.</p>
-            </div>
-          </div>
-          <div class="card row">
-            <div class="card-body">
-              <div class="title"><h2>Web Development</h2></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   Veniam, accusantium, explicabo, sit in eius vel provident debitis   magni impedit distinctio enim expedita sapiente! Dignissimos quas   voluptatem aspernatur tempore porro aut.</p>
-            </div>
-          </div>
-          <div class="card row">
-            <div class="card-body">
-              <div class="title"><h2>Hobbies</h2></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.   Veniam, accusantium, explicabo, sit in eius vel provident debitis   magni impedit distinctio enim expedita sapiente! Dignissimos quas   voluptatem aspernatur tempore porro aut.</p>
-            </div>
-          </div>
-        </div>
+        <div class="title"><h2>About Me</h2></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Veniam, accusantium, explicabo, sit in eius vel providedebitis   magni impedit distinctio enim expedita sapientDignissimos quas   voluptatem aspernatur tempore porro aut.</p>
         <div id="pfp">
           <img src="./my_photo.jpg" alt="Kritarth Kambli">
         </div>
