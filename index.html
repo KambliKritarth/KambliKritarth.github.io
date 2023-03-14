@@ -176,14 +176,25 @@
       color:  rgb(106, 7, 212);
     }
     .about p{
-      margin: 5vh 0 5vh 5vw;
-      font-family: "Ibarra Real Nova", serif;
-      color:  white;
-      background-color:  rgb(106, 7, 212);
+      margin: 2vh 0 2vh 0;
+      font-family: "MonoSpace", monospace;
+      color:  rgb(21, 1, 42);
+      background-color:  white;
       border-radius: 5vh;
-      font-size: 3vh;
-      padding: 2vh 5vw 2vh 5vw;
-      width: 25vw;
+      font-size: 2vh;
+      padding: 2vh 2vw 2vh 2vw;
+      width: 60vw;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: 
+        typing 4s steps(222),
+        cursor 2.5s step-end infinite alternate;
+    }
+    @keyframes cursor {
+      50%{border-color: transparent;}
+    }
+    @keyframes typing {
+      from{width:0}
     }
     .cards{
       flex-wrap: wrap;
@@ -229,6 +240,7 @@
     #image img{
       height:30vh;
       margin: 1vh 1vh 1vh 5vh;
+      
       align-items: center;
     }
     .image{
@@ -320,6 +332,7 @@
     }
     .about #pfp img{
       max-height: 25vh;
+      border-radius: 2vh 2vw 2vh 2vw;
       max-width: 25vw;
     }
     @media screen and (min-width:1000px){
@@ -410,7 +423,7 @@
     <div id="menu">
       <div id="menu-items">
         <a href = "#me" class="menu-item"><i class="fa fa-home"></i> Home</a>
-        <a href = "/" class="menu-item"><i class="fab fa-github"></i> Projects</a>
+        <a href = "#projects" class="menu-item"><i class="fab fa-github"></i> Projects</a>
         <a href = "/" class="menu-item"><i class="fa fa-pencil-ruler"></i> Skills</a>
         <a href = "/" class="menu-item"><i class="fa fa-phone"></i> Contact Me!</a>
       </div>
@@ -447,13 +460,12 @@
     
     <div class = "homelings" id="me">
       <div class="about">
-        <div class="title"><h2>About Me</h2></div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Veniam, accusantium, explicabo, sit in eius vel providedebitis   magni impedit distinctio enim expedita sapientDignissimos quas   voluptatem aspernatur tempore porro aut.</p>
-        <div id="pfp">
+          <div id="pfp">
           <img src="./my_photo.jpg" alt="Kritarth Kambli">
         </div>
+          <p>Hello my name is Kritarth Kambli, an aspiring fullstack developer. I am interested in Machine Learning</p>
       </div>
-        <div class="timeline">
+        <div class="timeline" id = "projects">
         <div class="box left-container">
           <div class="text-box">
             <h2>Project1</h2>
