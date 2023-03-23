@@ -1,0 +1,249 @@
+body{
+      background-color: #5c51bf;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+    #menu{
+      height: 60vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-grow: 0;
+    }
+    .menu-item{
+      color:white;
+      font-size: clamp(1.5rem, 4vw, 4rem);
+      font-family: "Ibarra Real Nova", serif;
+
+      display: block;
+      text-decoration: none;
+      padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+    }
+    #menu-items{
+      margin-left: clamp(4rem, 20vw, 48rem);
+      position: relative;
+      z-index: 2;
+    }
+    #menu-items:hover > .menu-item{
+      opacity: 0.3;
+    }
+    #menu-items:hover > .menu-item:hover{
+      opacity: 1;
+    }
+    
+    #menu-background-pattern{
+      height: 70vh;
+      width: 100vw;
+      background-image:radial-gradient(
+        rgba(249, 249, 249, 0.155) 9%,
+        transparent 9%
+      );
+      background-position: 0% 0%;
+      background-size: 12vmin 12vmin;
+
+      position: absolute;
+      left:0px;
+      top:0px;
+      z-index: 1;
+
+      transition: 800ms, background-size 800ms;
+    }
+    #menu-items:hover ~ #menu-background-pattern{
+      background-size: 11vmin 11vmin;
+      opacity: 0.5;
+    }
+    #menu[data-active-index = "0"] > #menu-background-pattern{
+      background-position: 0% -25%;
+    }
+    #menu[data-active-index = "1"] > #menu-background-pattern{
+      background-position: 0% -25%;
+    }
+    #menu[data-active-index = "2"] > #menu-background-pattern{
+      background-position: 0% -50%;
+    }
+    #menu[data-active-index = "3"] > #menu-background-pattern{
+      background-position: 0% -75%;
+    }
+    #menu-background-image{
+      height: 80%;
+      width: 80%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 0;
+      background-position: center 40%;
+      background-size: 110vmax;
+      opacity: 0.15;
+      transition: opacity 800ms ease,
+      background-size 800ms ease,
+      background-position 800ms ease ;
+    }
+    .editorial {
+      display: block;
+      width: 100%;
+      height: 60px;
+      max-height: 60px;
+      margin: 0;
+      z-index:5;
+      bottom:0;
+      left:0px;
+      float:left;
+      flex-grow: 1;
+    }
+    .parallax1 > use {
+    animation: move-forever1 10s linear infinite;
+      &:nth-child(1) {animation-delay: -2s;}
+    }
+    .parallax2 > use {
+      animation: move-forever2 8s linear infinite;
+      &:nth-child(1) {animation-delay: -2s;}
+    }
+    .parallax3 > use {
+      animation: move-forever3 6s linear infinite;
+      &:nth-child(1) {
+        animation-delay: -2s;
+      }
+    }
+    .parallax4 > use {
+      animation: move-forever4 4s linear infinite;
+      &:nth-child(1) {
+        animation-delay: -2s;
+      }
+    }
+    @keyframes move-forever1 {
+      0% {
+        transform: translate(85px, 0%);
+      }
+      100% {
+        transform: translate(-90px, 0%);
+      }
+    }
+    @keyframes move-forever2 {
+      0% {
+          transform: translate(-90px, 0%);
+      }
+      100% {
+        transform: translate(85px, 0%);
+      }
+    }
+    @keyframes move-forever3 {
+      0% {
+        transform: translate(85px, 0%);
+      }
+      100% {
+        transform: translate(-90px, 0%);
+      }
+    }
+    @keyframes move-forever4 {
+      0% {
+        transform: translate(-90px, 0%);
+      }   
+      100% {
+        transform: translate(85px, 0%);
+      }
+    }
+    .abouthead h1{
+      background-color: white;
+      font-size: 5rem;
+      font-family: "Ibarra Real Nova", serif;
+      color:  rgb(106, 7, 212);
+      margin: 1vh 1vh 1vh 10vh;
+    }
+    .homelings{
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+    }
+    .about{
+      flex-grow: 0;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+    }
+    .about h2{
+      margin: 5vh 0 5vh 5vw;
+      font-family: "Ibarra Real Nova", serif;
+      color:  rgb(106, 7, 212);
+    }
+    .about p{
+      margin: 2vh 0 2vh 0;
+      font-family: "MonoSpace", monospace;
+      color:  rgb(21, 1, 42);
+      background-color:  white;
+      border-radius: 5vh;
+      font-size: 2vh;
+      padding: 2vh 2vw 2vh 2vw;
+      width: 60vw;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: 
+        typing 4s steps(102),
+        cursor 2.5s step-end infinite alternate;
+    }
+    @keyframes cursor {
+      50%{border-color: transparent;}
+    }
+    @keyframes typing {
+      from{width:0}
+    }
+    .cards{
+      flex-wrap: wrap;
+      gap:2em;
+      padding:2em 0;
+      display: flex;
+      flex-direction: row;
+    }
+    .card{
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      max-width: 15vw;
+      text-align: center;
+      overflow: hidden;
+      cursor: pointer;
+      color: #fff;
+      background-color: #5c51bf;
+      background-size: cover;
+      border-radius: 2.5vh;
+      -webkit-border-radius: 2.5vh;
+      -moz-border-radius: 2.5vh;
+      -ms-border-radius: 2.5vh;
+      -o-border-radius: 2.5vh;
+      transition: max-width 0.5s ease-in-out;
+      -webkit-transition: max-width 0.5s ease-in-out;
+      -moz-transition: max-width 0.5s ease-in-out;
+      -ms-transition: max-width 0.5s ease-in-out;
+      -o-transition: max-width 0.5s ease-in-out;
+    }
+    .card:hover{
+      max-width: 500px;
+    }
+    .card:nth-of-type(2){
+      background-color: #2e0021;
+    }
+    .card:nth-of-type(3){
+      background-color: #4579E2;
+    }
+    .card:nth-of-type(4){
+      background-color: #3461C1;
+    }
+    #image img{
+      height:30vh;
+      margin: 1vh 1vh 1vh 5vh;
+      
+      align-items: center;
+    }
+    .image{
+      border-radius: 1vh 1vh 1vh 1vh;
+    }
+    .about #pfp{
+      margin: 5vh 5vw 5vh 5vw;
+      align-items: center;
+    }
+    .about #pfp img{
+      max-height: 25vh;
+      border-radius: 2vh 2vw 2vh 2vw;
+      max-width: 25vw;
+    }
