@@ -138,7 +138,7 @@
       padding: 1vw 1.3vw;
       position: relative;
       border-radius: 1vw;
-      height: 32vh;
+      height: 36vh;
       width: 80vw;
       font-family: "Ibarra Real Nova", serif;
       font-size: 2.25vh;
@@ -150,6 +150,6 @@
       }
     }
     #headline{
-	    font-size:3.5vh;
+      font-size:6.5vh;
       padding-left: 48vw;
       }
