@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link rel="stylesheet" href="styles.css">
   <script src = "index.js"></script>
 </head>
@@ -14,10 +15,15 @@
       <div id="menu-items">
         <a href = "#me" class="menu-item"><i class="fa fa-home"></i> Home</a>
         <a href = "project.html" class="menu-item"><i class="fab fa-github"></i> Projects</a>
-        <a href = "/" class="menu-item"><i class="fa fa-pencil-ruler"></i> Skills</a>
-        <a href = "/" class="menu-item"><i class="fa fa-phone"></i> Contact Me!</a>
+	<div class="modal" id="modal">
+	<div class="modal-header">ayoyo wassup
+		<button class="close-button">&times;</button></div>
+	<div class="modal-body">this is jesse pinkman abq rep</div>
+	</div>
+        <a href = "/" class="menu-item"><i class="fa fa-phone"></i> Contact Me!</a>	<a href = "#modal" class="menu-item" id="skillbutton"><button><i class="fa fa-pencil-ruler"></i> Skills</button></a>
       </div>
     </div>
+    <div id = "overlay"></div>
     <div id="divider">
       <svg class="editorial"
      xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +59,13 @@
           <div id="pfp">
           <img src="./my_photo.jpg" alt="Kritarth Kambli">
         </div>
-          <p>Hello my name is Kritarth Kambli, an aspiring fullstack developer. I am interested in Machine Learning</p>
+	<div class = "text_abt">
+		<h2>ABOUT ME</h2>
+		<p>Hello my name is Kritarth Kambli, an aspiring fullstack developer. </p>
+          <p>I am a final year student learning great things about React.js, HTML and CSS.  </p>
+          <p>Besides my passion for Web Development I like to work with Machine Learning/Deep Learning. </p></div>
+	
+	</div>
       </div>
     </div>
     <div id="menu-background-pattern"></div>

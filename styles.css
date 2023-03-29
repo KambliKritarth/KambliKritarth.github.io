@@ -16,7 +16,6 @@ body{
       color:white;
       font-size: clamp(1.5rem, 4vw, 4rem);
       font-family: "Ibarra Real Nova", serif;
-
       display: block;
       text-decoration: none;
       padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
@@ -25,6 +24,10 @@ body{
       margin-left: clamp(4rem, 20vw, 48rem);
       position: relative;
       z-index: 2;
+    }
+    #skillbutton{
+    	color:white;
+        background-color:transparent;
     }
     #menu-items:hover > .menu-item{
       opacity: 0.3;
@@ -147,7 +150,7 @@ body{
     .abouthead h1{
       background-color: white;
       font-size: 5rem;
-      font-family: "Ibarra Real Nova", serif;
+      font-family: "Poppins";
       color:  rgb(106, 7, 212);
       margin: 1vh 1vh 1vh 10vh;
     }
@@ -162,14 +165,19 @@ body{
       display: flex;
       flex-direction: row;
     }
+    .text_abt{
+      direction:flex;
+      flex-direction:column;
+    }
     .about h2{
-      margin: 5vh 0 5vh 5vw;
-      font-family: "Ibarra Real Nova", serif;
+      margin: 5vh 0 0 0;
+      padding:2vh 0 0 2vw ;
+      font-family: "Poppins";
       color:  rgb(106, 7, 212);
     }
     .about p{
-      margin: 2vh 0 2vh 0;
-      font-family: "MonoSpace", monospace;
+      margin: 2vh 0 0  0;
+      font-family: "Poppins";
       color:  rgb(21, 1, 42);
       background-color:  white;
       border-radius: 5vh;
@@ -181,6 +189,33 @@ body{
       animation: 
         typing 4s steps(102),
         cursor 2.5s step-end infinite alternate;
+    }
+    .modal{
+       position:fixed;
+       top:50%;
+       left:50%;
+       transform: translate(-50%,-50%);
+       border: 1px solid black;
+       border-radius:10px;
+       background-color:#756BC8;
+       z-index:10;
+       max-width:80%;	
+    }
+    .modal-header{
+    	padding-left:2vw;
+	padding-top:auto;
+	display:flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black
+    }
+    #overlay{
+	position:fixed;
+	opacity:0;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(0,0,0,.5);
     }
     @keyframes cursor {
       50%{border-color: transparent;}
