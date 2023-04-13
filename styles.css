@@ -28,6 +28,7 @@ body{
     #skillbutton{
     	color:white;
         background-color:transparent;
+	border-color:transparent;
     }
     #menu-items:hover > .menu-item{
       opacity: 0.3;
@@ -82,6 +83,10 @@ body{
       transition: opacity 800ms ease,
       background-size 800ms ease,
       background-position 800ms ease ;
+    }
+    .close-button{
+      color:white;
+      background-color:black;
     }
     .editorial {
       display: block;
