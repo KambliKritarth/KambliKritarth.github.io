@@ -206,7 +206,6 @@ body{
        z-index:10;
        max-width:80%;	
     }
-
     .modal-header{
     	padding-left:2vw;
 	padding-top:auto;
@@ -222,11 +221,6 @@ body{
 	right:0;
 	bottom:0;
 	background-color:rgba(0,0,0,.5);
-        pointer-events:none;	
-    }
-    #overlay.active{
-    	opacity:1;
-	pointer-events:all;
     }
     @keyframes cursor {
       50%{border-color: transparent;}
