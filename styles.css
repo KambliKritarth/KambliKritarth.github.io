@@ -195,33 +195,6 @@ body{
         typing 4s steps(102),
         cursor 2.5s step-end infinite alternate;
     }
-    .modal{
-       position:fixed;
-       top:50%;
-       left:50%;
-       transform: translate(-50%,-50%);
-       border: 1px solid black;
-       border-radius:10px;
-       background-color:#756BC8;
-       z-index:10;
-       max-width:80%;	
-    }
-    .modal-header{
-    	padding-left:2vw;
-	padding-top:auto;
-	display:flex;
-	justify-content: space-between;
-	border-bottom: 1px solid black
-    }
-    #overlay{
-	position:fixed;
-	opacity:0;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	background-color:rgba(0,0,0,.5);
-    }
     @keyframes cursor {
       50%{border-color: transparent;}
     }
@@ -286,4 +259,46 @@ body{
       max-height: 25vh;
       border-radius: 2vh 2vw 2vh 2vw;
       max-width: 25vw;
+    }
+    .modal{
+      padding: 3em 0 3em 20vw;
+      width: 100vw;
+      border: 0;
+      background-color: #0d1421;
+      color: #e90bc4;
+      margin: 0 auto;
+    }
+    .prog-lang{
+       font-family: "Poppins";
+    }
+    .modal h2{
+       font-family: "Poppins";
+    }
+    .prog-lang h3{
+       font-family: "Poppins";
+    }
+    #close-modal{
+      margin-left: 25vw;
+      font-size: 1.5vh;
+      width: 2vh;
+      height: 2vh;
+      background: transparent;
+      color: #e90bc4;
+    }
+    .skills{
+      display: flex;
+      flex-direction: row;
+    }
+    .prog-lang{
+      margin: 0 5vw 0 0;
+    }
+    .prog-lang li{
+      font-size: 2vh;
+      color: #fff;
+    }
+    .skil{
+      text-align: center;
+    }
+    .skil:hover{
+      text-decoration: underline;
     }
