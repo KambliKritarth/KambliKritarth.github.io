@@ -180,8 +180,8 @@ body{
       font-family: "Poppins";
       color:  rgb(106, 7, 212);
     }
-    .about p{
-      margin: 2vh 0 0  0;
+    .text_abt li{
+      margin: 0 0 0  0;
       font-family: "Poppins";
       color:  rgb(21, 1, 42);
       background-color:  white;
